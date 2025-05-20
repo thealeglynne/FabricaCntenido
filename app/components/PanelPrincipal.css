@@ -1,0 +1,398 @@
+html, body, #__next {
+    height: 80%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #101010;
+    color: #fff;
+    font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Panel principal ocupa todo */
+  .panel-bg {
+    min-height: 70vh;
+    width: 100vw;
+    background: #101010;
+    border-radius: 0;
+    box-shadow: 0 8px 40px 0 rgba(0,0,0,0.25);
+    padding: 2.5rem 2rem;
+    border: none;
+    max-width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .panel-title {
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+  
+  .panel-subtitle {
+    color: #fff;
+    font-size: 1.18rem;
+    letter-spacing: 0.09em;
+    margin-bottom: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .panel-form label {
+    color: #b8b8b8;
+    font-size: .9rem;
+    text-transform: uppercase;
+    margin-bottom: .22rem;
+    letter-spacing: .04em;
+    font-weight: 500;
+  }
+  
+  .panel-form select,
+  .panel-form input {
+    width: 100%;
+    background: #171717;
+    color: #f5f5f5;
+    border: 1.2px solid #222;
+    border-radius: 10px;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    font-family: 'Inter', Arial, sans-serif;
+    outline: none;
+    transition: border .18s, box-shadow .18s;
+  }
+  .panel-form select:focus,
+  .panel-form input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 1.5px #fff5;
+  }
+  
+  /* Botones */
+  .btn-main {
+    background: #fff;
+    color: #181818;
+    font-weight: 700;
+    padding: .60rem 2.1rem;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    margin-right: 1rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 rgba(80,80,80,0.08);
+    transition: background .15s, color .15s, transform .15s;
+  }
+  .btn-main:hover {
+    background: #ececec;
+    color: #222;
+    transform: scale(1.03);
+  }
+  .btn-secondary {
+    background: #171717;
+    color: #000000;
+    border: 1.3px solid #333;
+    padding: .60rem 2.1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .16s, color .16s;
+  }
+  .btn-secondary:hover {
+    background: #232323;
+    color: #fff;
+  }
+  
+  /* Listado de asignaciones */
+  .assign-list {
+    margin-top: 2.1rem;
+    max-height:204rem;
+    overflow-y: auto;
+    padding-right: 0.4rem;
+    scrollbar-width: thin;
+    scrollbar-color: #fff #171717;
+  }
+  .assign-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  .assign-list::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 8px;
+  }
+  .assign-card {
+    background: #181818;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin-bottom: .7rem;
+    color: #000000;
+    font-size: 9px;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    transition: box-shadow .16s, border .16s;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.03);
+  }
+  .assign-card .mat-title {
+    color: #5d5d5d;
+    font-weight: 700;
+    font-size: 9px;
+    margin-bottom: .32rem;
+    letter-spacing: .05em;
+  }
+  .assign-card span {
+    display: block;
+    margin-bottom: 0.10rem;
+    color: #898989;
+  }
+  
+  /* Animación de hover en las cards */
+  .assign-card:hover {
+    border-color: #fff;
+    box-shadow: 0 8px 28px 0 rgba(255,255,255,0.07);
+    background: #202020;
+    color: #fff;
+  }
+  
+  /* Mensajes */
+  .msg-info {
+    color: #fff;
+    background: #222;
+    border-left: 4px solid #fff;
+    padding: 0.75em 1em;
+    font-size:9px;
+    margin-top: 1rem;
+    border-radius: 7px;
+    letter-spacing: 0.04em;
+  }
+  
+  /* Responsive */
+  @media (max-width: 800px) {
+    .panel-bg {
+      padding: 1.2rem .5rem;
+      max-width: 100vw;
+    }
+    .grid-cols-2 {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  html, body, #__next {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: 'Inter', 'Playfair Display', 'Montserrat', sans-serif;
+  }
+  
+  .panel-bg {
+    background: #fff;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .panel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.2rem;
+  }
+  
+  .panel-subtitle {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .panel-form {
+    max-width: 720px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .panel-form label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+  
+  .panel-form input,
+  .panel-form select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #222;
+    background-color: #fff;
+    color: #111;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .panel-form input:focus,
+  .panel-form select:focus {
+    border-color: #000;
+    outline: none;
+  }
+  
+  .btn-main {
+    background-color: #111;
+    color: #fff;
+    padding: 0.5rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-main:hover {
+    background-color: #000;
+  }
+  
+  .btn-secondary {
+    background-color: #fff;
+    color: #111;
+    border: 1px solid #222;
+    padding: 0.5rem 1.6rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .btn-secondary:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .custom-listbox-btn {
+    width: 100%;
+    background: #fff;
+    color: #111;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .custom-listbox-options {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #222;
+    border-radius: 6px;
+    max-height: 700px;
+    overflow-y: auto;
+    font-size: 1rem;
+    z-index: 50;
+  }
+  
+  .custom-listbox-option {
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    color: #111;
+  }
+  .custom-listbox-option:hover,
+  .custom-listbox-option.active {
+    background-color: #f0f0f0;
+  }
+  
+  .assign-list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1080px;
+  }
+  
+  .assign-card {
+    background-color: #fff;
+    border: 1px solid #222;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    font-size: 1rem;
+    transition: background 0.2s, border 0.2s;
+  }
+  .assign-card:hover {
+    background: #fafafa;
+    border-color: #000;
+  }
+  
+  .assign-card .mat-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .msg-info {
+    background-color: #f7f7f7;
+    color: #111;
+    border-left: 4px solid #222;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+  }
+  
+  .panel-select {
+    background-color: #fff;
+    color: #111;
+    border: 1px solid #222;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .panel-form {
+      grid-template-columns: 1fr;
+    }
+  }
+  .panel-form {
+    max-width: 980px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  /* Ajustar la fila de materia para que no salte debajo */
+  .panel-form .col-span-2, .panel-form .col-span-3 {
+    grid-column: span 1; /* default */
+  }
+  
+  @media (max-width: 1000px) {
+    .panel-form {
+      max-width: 99vw;
+      grid-template-columns: 1fr 1fr;
+    }
+    .panel-form .col-span-2, .panel-form .col-span-3 {
+      grid-column: span 2;
+    }
+  }
+  @media (max-width: 600px) {
+    .panel-form {
+      grid-template-columns: 1fr;
+      gap: 13px 0;
+    }
+    .panel-form .col-span-2, .panel-form .col-span-3 {
+      grid-column: span 1;
+    }
+  }
+  

@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model RegistroActividad {
+  id               Int      @id @default(autoincrement())
+  Analista         String
+  Auxiliar         String?
+  Practicante      String?
+  Equipo           String
+  Materia          String
+  ID_Granulo       Int
+  Nombre_Granulo   String
+  Actividad        String
+  Rol              String
+  Fecha_Asignacion DateTime
+  Fecha_Inicio     DateTime?
+  Fecha_Fin        DateTime?
+  Tiempo_Real_Min  Float?
+  Tiempo_Ideal_Min Float
+  Observaciones    String?
+}
+model materiaExtra {
+  id              Int      @id @default(autoincrement())
+  Materia         String
+  Equipo          String?
+  Fecha_Entrega   DateTime?
+  Correcciones    String?
+  Fecha_Reentrega DateTime?
+  Estado          String?  // (En progreso, entregado, corregido, etc.)
+  Observaciones   String?
+}
